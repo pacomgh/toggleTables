@@ -1,0 +1,250 @@
+/* color to table */
+:root{
+    --color-primary: #d58430;
+    --color-accent: #ffc46c;
+    --color-black: #000;
+    /*table variables*/
+    --clr-primary: #81d4fa;
+    --clr-primary-light: #e1f5fe;
+    --clr-primary-dark: #4fc3f7;
+    --clr-gray100: #f9fbff;
+    --clr-gray150: #f4f6fb;
+    --clr-gray200: #eef1f6;
+    --clr-gray300: #e1e5ee;
+    --clr-gray400: #767b91;
+    --clr-gray500: #4f546c;
+    --clr-gray600: #2a324b;
+    --clr-gray700: #161d34;
+    /* --clr-pending: #fff0c2;
+    --clr-pending-font: #a68b00; */
+    --clr-disable: #ffcdd2;
+    --clr-disable-font: #c62828;
+    --clr-enable: #c8e6c9;
+    --clr-aceptable: #6da46e;
+    --clr-not-aceptable: #f93e3e;
+    --clr-low: #fbff00;
+    --clr-enable-font: #388e3c;
+    --clr-link: #2962ff;
+    --radius: 0.2rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* estilos generales */
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    padding-right: .5rem;
+    padding-top: 0;
+    text-align: right;
+}
+
+.text-left{
+    padding-left: .5rem;
+    padding-top: 0;
+    text-align: none;
+}
+
+.borded{
+    border: 2px solid var(--color-black);
+}
+
+/* tabs & animation styles*/
+body {
+    /* font-family: Mukta, sans-serif; */
+    font-family: "Josefin Sans", sans-serif;
+    height: 100vh;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: var(--clr-gray100);
+}
+
+/* Style the tab */
+.tab {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    display: flex;
+}
+
+/* Style the buttons inside the tab */
+/* .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+} */
+
+/* Change background color of buttons on hover */
+/* .tab button:hover:not(.active) {
+    background-color: var(--color-primary);
+    color: var(--clr-gray100);
+} */
+
+/* Create an active/current tablink class */
+/* .tab button.active {
+    color: var(--color-primary);
+    border-bottom:3px solid var(--color-primary);
+    background-color: white;
+} */
+
+/* .tab button.active:hover {
+    border-bottom:3px solid var(--color-primary);
+} */
+
+/* Style the tab content */
+
+.tabcontent {
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height:28rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    padding: 6px 8px;
+}
+
+.active-week{
+    overflow: scroll;
+}
+
+/* Style the close button */
+/* span.sticky{
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+}
+
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.topright:hover {
+    color: red;
+} */
+
+/* table design styles */
+
+table {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px var(--clr-gray300);/* 
+    overflow: scroll; */
+    margin: 0px 0px;
+    /* width: 100%; */
+}
+
+.tabcontent::-webkit-scrollbar {
+    background: var(--clr-gray300);
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 5px;
+}
+
+.tabcontent::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+thead {
+    box-shadow: 0 5px 10px var(--clr-gray300);
+}
+
+th {
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    min-width: 4rem;
+    padding: .2rem .2rem;
+    text-align: left;
+    text-transform: capitalize;
+} 
+
+.inactive-week th {
+    min-width: fit-content;
+}
+tr:nth-child(even) {
+    background-color: var(--clr-gray200);
+}
+
+tr:not(.table-headers):nth-child(even) {
+    background-color: var(--clr-gray200);
+}
+
+tr:not(.table-headers):hover {
+    background-color: var(--clr-gray400);
+    color: var(--color-white);
+}
+
+tr.table-headers {
+    background-color: #fff;
+    width: 16rem;
+}
+
+td { 
+    padding: .5rem .5rem;
+    white-space: nowrap;
+}
+
+td > i:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.bajo, .aceptable, .no-aceptable{
+    width: 100%;
+    border: 2px solid;
+    border-radius: 6px;
+    padding: .1rem;
+}
+
+.aceptable{
+    background-color: var(--clr-aceptable);
+    border:green;
+    color: #fff;
+}
+
+.bajo{
+    background-color: var(--clr-low);
+    border:var(--clr-low);
+}
+
+.no-aceptable{
+    background-color: var(--clr-not-aceptable);
+    border:var(--clr-not-aceptable);
+    color: #fff;
+}
+
+svg{
+    color: var(--color-primary);
+    height: 1.3rem;
+    width: 1.3rem;
+    cursor: pointer;
+}
+
+/* estilos inactive week*/
+.inactive-week .toggle-column{
+    display: none;
+    min-width: fit-content;
+}
+
+.active-week th, 
+.activate th{
+    min-width: 4rem;
+}
+
+.myToggle{
+    display: none;
+}
